@@ -1,5 +1,5 @@
 {
-    "homepage": "https://abirtijja5.github.io/PortfolioTijjaAbir/",
+    "homepage": ".",
     "name": "tijja-abir-portfolio",
     "version": "0.1.0",
     "private": true,
@@ -17,6 +17,7 @@
         "react": "^18.0.0",
         "react-dom": "^18.0.0",
         "react-icons": "^4.3.1",
+        "react-is": "^19.2.7",
         "react-router-dom": "^6.3.0",
         "react-scripts": "5.0.1",
         "react-scroll": "^1.8.7",

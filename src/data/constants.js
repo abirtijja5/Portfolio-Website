@@ -4,16 +4,14 @@ export const Bio = {
     "Full Stack Developer",
     "Front-End Developer",
     "Ember.js Specialist",
-    "Web developer",
-    "UI/UX Designer",
-    "Programmer",
+    "Web Developer",
   ],
   description:
-    "Alternante Front-End spécialisée en Ember.js, actuellement en double Master (Expert Informatique & Computer Science for Aerospace). Je cherche un poste Full-Stack où allier rigueur technique et créativité. I am motivated, adaptable, and constantly seeking out new challenges — committed to producing top-notch results with a growth mindset.",
+    "Développeuse Full-Stack alternante spécialisée en Ember.js, actuellement en double Master (Expert Informatique & Computer Science for Aerospace). Passionnée par la création d'interfaces modernes et performantes, je cherche à allier rigueur technique et créativité dans chaque projet.",
   github: "https://github.com/abirtijja5",
   resume:
-    "https://drive.google.com/file/d/1uTFOt5cBD2pD2nj2o7Ogos7okWmGGCuy/view?usp=sharing",
-  linkedin: "https://www.linkedin.com/in/abir-tj-344680238/",
+    "https://drive.google.com/file/d/1oX2GP58p0a4nO9ReMioq-8lDlV5b3CMM/view?usp=sharing",
+  linkedin: "https://www.linkedin.com/in/abir-tijja-344680238/",
   insta: "https://www.instagram.com/tijja_abir/?next=%2F",
   facebook: "https://www.facebook.com/profile.php?id=100073383991278",
 };
@@ -23,19 +21,34 @@ export const skills = [
     title: "Frontend",
     skills: [
       {
+        name: "Ember.js",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/ember/ember-original-wordmark.svg",
+      },
+      {
         name: "React Js",
         image:
           "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
       },
       {
-        name: "PHP",
+        name: "Angular",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original.svg",
       },
       {
-        name: "Django",
+        name: "TypeScript",
         image:
-          "https://logodix.com/logo/1758765.jpg",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
+      },
+      {
+        name: "JavaScript",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
+      },
+      {
+        name: "React Native",
+        image:
+          "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
       },
       {
         name: "HTML",
@@ -47,34 +60,9 @@ export const skills = [
           "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png",
       },
       {
-        name: "JavaScript",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
-      },
-      {
         name: "Bootstrap",
         image:
           "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
-      },
-      {
-        name: "Material UI",
-        image:
-          "data:image/png;base64,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",
-      },
-      {
-        name: "Flutter",
-        image:
-          "https://cdn-images-1.medium.com/max/1200/1*5-aoK8IBmXve5whBQM90GA.png",
-      },
-      {
-        name: "Ember.js",
-        image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/ember/ember-original-wordmark.svg",
-      },
-      {
-        name: "React Native",
-        image:
-          "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
       },
     ],
   },
@@ -86,24 +74,28 @@ export const skills = [
         image: "https://nodejs.org/static/images/logo.svg",
       },
       {
-        name: "Express Js",
-        image:
-          "data:image/png;base64,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",
-      },
-     
-      {
-        name: "Python",
+        name: "Python / Django",
         image:
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+      },
+      {
+        name: "PHP",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png",
+      },
+      {
+        name: "Ruby on Rails",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/ruby/ruby-original.svg",
+      },
+      {
+        name: "FastAPI",
+        image: "https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png",
       },
       {
         name: "MySQL",
         image:
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
-      },
-      {
-        name: "Fastapi",
-        image: "https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png",
       },
       {
         name: "MongoDB",
@@ -129,7 +121,6 @@ export const skills = [
         image:
           "https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg",
       },
-     
       {
         name: "Android Studio",
         image:
@@ -138,34 +129,17 @@ export const skills = [
     ],
   },
   {
-    title: "Others",
+    title: "Outils & Design",
     skills: [
-      {
-        name: "Git",
-        image:
-          "https://camo.githubusercontent.com/fbfcb9e3dc648adc93bef37c718db16c52f617ad055a26de6dc3c21865c3321d/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6769742d73636d2f6769742d73636d2d69636f6e2e737667",
-      },
-      {
-        name: "GitHub",
-        image:
-          "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-      },
       {
         name: "Docker",
         image:
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg",
       },
-     
       {
-        name: "VS Code",
+        name: "Git",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
-      },
-   
-      {
-        name: "Adobe XD",
-        image:
-          "https://justtheskills.com/wp-content/uploads/2021/04/adobe-xd.png",
+          "https://camo.githubusercontent.com/fbfcb9e3dc648adc93bef37c718db16c52f617ad055a26de6dc3c21865c3321d/68747470733a2f2f7777772e766563746f726c6f676f2e7a6f6e652f6c6f676f732f6769742d73636d2f6769742d73636d2d69636f6e2e737667",
       },
       {
         name: "Figma",
@@ -173,14 +147,24 @@ export const skills = [
           "https://brandlogos.net/wp-content/uploads/2022/05/figma-logo_brandlogos.net_6n1pb.png",
       },
       {
-        name: "Ruby",
+        name: "Power BI",
         image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/ruby/ruby-original.svg",
+          "https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg",
       },
       {
-        name: "Swift",
+        name: "Adobe XD",
         image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/swift/swift-original.svg",
+          "https://justtheskills.com/wp-content/uploads/2021/04/adobe-xd.png",
+      },
+      {
+        name: "VS Code",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png",
+      },
+      {
+        name: "Spring Boot",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg",
       },
     ],
   },
@@ -192,198 +176,227 @@ export const experiences = [
     img: "https://www.shippingbo.com/content/themes/sbo-theme/build/images/logo_shippingbo-header.svg",
     role: "Développeuse Front-End",
     company: "Shippingbo",
-    date: "September 2024 - September 2026",
-    desc: "Création et développement de composants réutilisables avec Ember.js, contribuant à la maintenance et l'évolution de Shippingbo, solution SaaS logistique utilisée par des e-commerçants à l'échelle internationale. Rôle clé dans l'initialisation de Smart Procurement : architecture front-end, choix techniques et premières fonctionnalités.",
+    date: "Septembre 2024 – Septembre 2026",
+    desc: "Développement de composants réutilisables en Ember.js Octane sur 3 périmètres : l'OMS, l'application Smart Procurement et la librairie partagée sbo-ember-ui-kit. Seule développeuse front-end sur Smart Procurement : architecture SPA complète (Routes, Controllers, Composants Glimmer, Ember Data, Adapters JSON:API vers Rails). Modernisation des pages de configuration OMS : migration Ember Classic → Octane, refonte CSS alignée avec le Design System.",
     skills: [
       "Ember.js",
       "Ruby on Rails",
       "Docker",
+      "JSON:API",
+      "Glimmer",
     ],
   },
   {
     id: 1,
+    img: "https://cdn.freelancermap.com/images/freelancer/avatar/logo/2023/2/freelancer_logo_2.png",
+    role: "Développeuse Web Freelance",
+    company: "Remote — Indépendante",
+    date: "2024 – 2025",
+    desc: "Intégration et modification d'interfaces avec React.js, HTML/CSS et Bootstrap. Correction de bugs et amélioration de fonctionnalités existantes. Participation à l'adaptation responsive des pages web. Échanges directs avec les clients pour comprendre et répondre aux besoins des projets.",
+    skills: [
+      "React.js",
+      "HTML/CSS",
+      "Bootstrap",
+      "Angular",
+      "NodeJS",
+    ],
+  },
+  {
+    id: 2,
     img: "https://www.inrap.fr/sites/inrap.fr/files/styles/article/public/thumbnails/image/logo_universite_toulouse_iii_paul_sabatier.jpg?itok=86ESKfXz",
-    role: "Stagiaire de recherche en cybersécurité",
+    role: "Stagiaire Recherche en Cybersécurité",
     company: "Université Paul Sabatier",
-    date: "May 2024 - August 2024",
-    desc: "Conception et développement d'une application mobile interactive Protect-Me! en utilisant React Native. Recherche et identification de divers types de cyberattaques. Développement de modules éducatifs interactifs sur la cybersécurité. Création et amélioration de l'interface utilisateur et intégration de niveaux de compréhension adaptés aux utilisateurs.",
+    date: "Mai 2024 – Août 2024",
+    desc: "Conception et développement d'une application mobile interactive Protect-Me! en utilisant React Native. Recherche et identification de divers types de cyberattaques. Développement de modules éducatifs interactifs sur la cybersécurité et intégration de niveaux de compréhension adaptés aux utilisateurs.",
     skills: [
       "React Native",
       "Cybersécurité",
       "FIGMA",
+      "UX Design",
     ],
   },
   {
-    id: 2,
+    id: 3,
     img: "https://emploi.digitalexpo.fr/uploads/Stand/15/NEXTEAM-Logo-long-63809c82e51d2.jpg",
-    role: "Web Developer - Python / Django (M/F)",
-    company: "Nexteam Services - NEXTEAM Group.",
-    date: "March 2023 - Aug 2023",
-    desc: "Development of a web application integrating business functionalities and composite transmission trees, locally hosting it for multisite access,",
+    role: "Développeuse Web — Python / Django",
+    company: "Nexteam Services · NEXTEAM Group",
+    date: "Mars 2023 – Août 2023",
+    desc: "Conception UX et mise en place d'une maquette Figma. Création d'une application web avec Django, CSS, HTML et JavaScript. Hébergement de l'application sur un serveur local pour un accès multi-sites.",
     skills: [
       "Django",
-      "HTML",
-      "CSS",
-      " bootstrap",
+      "Python",
+      "HTML/CSS",
       "JavaScript",
       "FIGMA",
-      " Python",
-      " SQLite",
-      
+      "SQLite",
     ],
   },
   {
-    id: 0,
+    id: 4,
     img: "https://www.maroc.ma/sites/default/files/image_actualite/agence-urbaine-laayoune.jpg",
-    role: "Data analyst",
-    company: "Agence urbaine",
-    date: "April 2022 - June 2022",
-    desc: "Developing a web application for store management..",
+    role: "Développeuse Full-Stack",
+    company: "Agence Urbaine",
+    date: "Avril 2022 – Juin 2022",
+    desc: "Conception et mise en place d'une maquette Figma. Création d'une application web pour la gestion de magasin. Intégration d'une base de données relationnelle et d'une interface dynamique et responsive.",
     skills: [
-      "FIGMA",
-      "HTML",
-      "CSS",
-      "Bootstrap",
-      "PHP,",
+      "PHP",
       "MySQL",
       "JavaScript",
       "jQuery",
-    ] },
-  {
-    id: 1,
-    img: "https://www.infomediaire.net/wp-content/uploads/2020/08/Le-ministere-de-lEducation-nationale.png",
-    role: "Data analyst",
-    company: "Ministère de l'éducation nationale",
-    date: "June 2021 - July 2021",
-    desc: "Built an employee management full stack web app used Docker and deployed on AWS ec2. I was the top performer in the program.",
-    skills: [
-      "ReactJS",
-      "Redux",
-      "NodeJs",
-      "Material UI",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Docker",
+      "Bootstrap",
+      "FIGMA",
     ],
   },
   {
-    id: 2,
+    id: 5,
     img: "https://tse3.mm.bing.net/th?id=OIP.BhAvqPlnLGi436N6VGFwZQHaHa&pid=Api&P=0&h=180",
-    role: "Designer Merch by Amazon ",
+    role: "Designer Merch by Amazon",
     company: "Amazon",
-    date: "January 2022 - Present",
-    desc: "Designing and creating original illustrations for t-shirts and other merchandise using graphic design software and tools.",
+    date: "Janvier 2022 – Présent",
+    desc: "Conception d'illustrations originales pour des produits dérivés (t-shirts, etc.) via des outils de design graphique.",
+    skills: ["Illustration", "Design graphique"],
   },
-
-    //desc: "As an Android Developer Intern at Rudraksha Welfare Foundation from June 2021 to October 2021, I gained valuable hands-on experience in application development. During my tenure, I contributed to the development of the application's back-end cloud functions using Firebase and implemented a front-end with the MVVM structure, which was designed using Figma. I also added a one-to-one video call feature, conceptualized new features, and optimized app performance. This internship helped me enhance my skills in Android development and gave me an opportunity to work in a collaborative team environment.",
-
+  {
+    id: 6,
+    img: "https://www.infomediaire.net/wp-content/uploads/2020/08/Le-ministere-de-lEducation-nationale.png",
+    role: "Data Analyst (Stage)",
+    company: "Ministère de l'Éducation Nationale",
+    date: "Juin 2021 – Juillet 2021",
+    desc: "Analyse de données et création de tableaux de bord sous Excel. Conception d'une maquette pour un outil Web de demande d'absence destiné aux professeurs. Connexion d'ordinateurs à un réseau local filaire et sans-fil sous IPv4 et IPv6.",
+    skills: ["Excel", "Power BI", "Suite Office", "Réseaux"],
+  },
 ];
 
 export const education = [
   {
     id: 0,
     img: "https://images.seeklogo.com/logo-png/4/1/epsi-logo-png_seeklogo-48420.png",
-    school: "Master parcours Expert informatique et SI",
-    date: "2024 - 2026",
+    school: "Master parcours Expert Informatique et SI",
+    date: "2024 – 2026",
     grade: "",
     desc: "Master spécialisé en expertise informatique et systèmes d'information, en alternance chez Shippingbo en tant que Développeuse Front-End spécialisée Ember.js.",
-    degree: "EPSI, Toulouse (France)",
+    degree: "EPSI — Toulouse, France",
   },
   {
     id: 1,
     img: "https://www.inrap.fr/sites/inrap.fr/files/styles/article/public/thumbnails/image/logo_universite_toulouse_iii_paul_sabatier.jpg?itok=86ESKfXz",
-    school: "Master's degree in Computer science for aerospace (CSA)",
-    date: "2023 - 2025",
+    school: "Master Computer Science for Aerospace (CSA)",
+    date: "2023 – 2025",
     grade: "",
-    desc: "Master parcours Computer Science for Aerospace (CSA) à l'Université Paul Sabatier. Formation orientée développement logiciel et systèmes embarqués appliqués au domaine aérospatial.",
-    degree: "Université Toulouse III - Paul Sabatier",
-  },
-  {
-    id: 1,
-    img: "https://www.ee-francoallemand.com/sites/default/files/styles/educational_institution_logo_full/public/2020-09/logo-IUT-Paul-Sabatier.png?itok=aY5QtctE",
-    school: "Bachelor's degree in Professional Web and Mobile Application Design and Development.",
-    date: "2022 - 2023",
-    grade: "88.2%",
-    desc: "Licence Professionnelle spécialisée en Design et Réalisation des Applications Web et Mobile. Formation aux technologies React, PHP, JavaScript, et aux méthodes de conception UX/UI.",
-    degree: "IUT  Toulouse III - Paul Sabatier",
+    desc: "Master parcours Computer Science for Aerospace à l'Université Paul Sabatier. Formation orientée développement logiciel et systèmes embarqués appliqués au domaine aérospatial.",
+    degree: "Université Toulouse III – Paul Sabatier",
   },
   {
     id: 2,
+    img: "https://www.ee-francoallemand.com/sites/default/files/styles/educational_institution_logo_full/public/2020-09/logo-IUT-Paul-Sabatier.png?itok=aY5QtctE",
+    school: "Licence Pro. Design & Réalisation Apps Web/Mobile",
+    date: "2022 – 2023",
+    grade: "88.2%",
+    desc: "Licence Professionnelle spécialisée en Design et Réalisation des Applications Web et Mobile. Formation aux technologies React, PHP, JavaScript, et aux méthodes de conception UX/UI.",
+    degree: "IUT Toulouse III – Paul Sabatier",
+  },
+  {
+    id: 3,
     img: "http://w2.estl.ac.ma/wp-content/uploads/2015/11/logo3.jpg",
-    school: "DUT in Computer Engineering",
-    date: " 2020 -  2022",
+    school: "DUT Génie Informatique",
+    date: "2020 – 2022",
     grade: "92.3%",
-    desc: "DUT Génie Informatique. Formation aux bases du développement logiciel, réseaux, algorithmique et programmation Java/C.",
-    degree: "ECOLE SUPÉRIEURE DE TECHNOLOGIE - Laayoune (Maroc)",
+    desc: "Formation aux bases du développement logiciel, réseaux, algorithmique et programmation Java/C.",
+    degree: "École Supérieure de Technologie — Laayoune, Maroc",
   },
 ];
 
 export const projects = [
   {
-    id: 9,
+    id: 0,
     title: "VirVoile PerfPredic",
-    date: "January 2024 - Present",
+    date: "Janvier 2024 – Présent",
     description:
-      "VirVoile PerfPredic is a web application designed to Webizing and cloud deployment of a dynamic sailboat performance model construction application through machine learning.",
-    image:
-    "https://zupimages.net/up/24/13/svbz.png",
+      "Webisation et déploiement cloud d'une application de constitution dynamique d'un modèle de performance de voilier par apprentissage automatique.",
+    image: "https://zupimages.net/up/24/13/svbz.png",
     tags: [
-      "Gitlab",
       "React JS",
       "FastAPI",
       "API REST",
       "CI/CD",
       "Bootstrap",
-      "déploiement cloud",
+      "Cloud",
+      "GitLab",
     ],
     category: "web app",
     github: "https://framagit.org/dual-boat/projet-dual-boat",
     webapp: "https://framagit.org/dual-boat/projet-dual-boat",
   },
   {
-    id: 0,
-    title: "Tijja Hotel",
-    date: "May 2022 - June 2022",
+    id: 1,
+    title: "Protect-Me!",
+    date: "Mai 2024 – Août 2024",
     description:
-      "Developed a full-stack web application for hotel reservations.",
-    image:
-      "https://zupimages.net/up/24/13/wqhl.png",
-    tags: ["PHP", "Gitlab", "JavaScript", "HTML", "CSS"],
+      "Application mobile interactive de cybersécurité développée en React Native. Modules éducatifs sur les cyberattaques avec niveaux de compréhension adaptés.",
+    image: "https://raw.githubusercontent.com/nniinnoo/protectme/refs/heads/main/assets/images/app_illustration.png?token=GHSAT0AAAAAAD6QD6JNYXWKOJJIXMWICVAK2RJNC5Q",
+    tags: ["React Native", "Cybersécurité", "FIGMA", "GitHub"],
+    category: "android app",
+    github: "https://github.com/nniinnoo/protectme",
+    webapp: "https://github.com/nniinnoo/protectme",
+  },
+  {
+    id: 2,
+    title: "Tijja Hotel",
+    date: "Mai 2022 – Juin 2022",
+    description:
+      "Application web full-stack de réservation d'hôtel avec interface dynamique et responsive.",
+    image: "https://zupimages.net/up/24/13/wqhl.png",
+    tags: ["PHP", "JavaScript", "HTML", "CSS", "MySQL"],
     category: "web app",
     github: "https://github.com/abirtijja5/NewCodingBot",
     webapp: "https://abirtijjahotel.000webhostapp.com/",
   },
   {
-    id: 1,
-    title: "Fors",
-    date: "Oct 2022 - Mar 2023",
+    id: 3,
+    title: "Fors — Jeu Mobile",
+    date: "Oct 2022 – Mar 2023",
     description:
-      "Designed and developed the Fors project, a mobile game for a group tutored project.",
-    image:
-      "https://zupimages.net/up/24/13/tfxw.jpg",
-    tags: [
-      "Figma", "Jetpack compose", "Kotlin", "Firebase", "GitHub", "UML",
-    ],
+      "Jeu mobile développé en groupe dans le cadre d'un projet tuteuré. Interface Figma et développement Kotlin/Jetpack Compose.",
+    image: "https://zupimages.net/up/24/13/tfxw.jpg",
+    tags: ["Kotlin", "Jetpack Compose", "Firebase", "FIGMA", "GitHub"],
     category: "android app",
     github: "https://github.com/mmicastres/ptut-2022-23-equipe-a-lact/tree/master/app",
     webapp: "https://github.com/mmicastres/ptut-2022-23-equipe-a-lact/tree/master/app",
   },
   {
-    id: 2,
-    title: "managing a bookstore",
-    date: "Jan 2023 - Mar 2023",
+    id: 4,
+    title: "Gestion de Librairie",
+    date: "Jan 2023 – Mar 2023",
     description:
-      "Creation of a web application for managing a bookstore (composed of books).",
-    image:
-      "https://zupimages.net/up/24/13/ambb.png",
-    tags: ["React Js", "Json"],
+      "Application web de gestion d'une librairie (catalogue de livres) développée avec React.js.",
+    image: "https://zupimages.net/up/24/13/ambb.png",
+    tags: ["React Js", "JSON"],
     category: "web app",
     github: "https://codesandbox.io/s/librairieapi-forked-evjk8c",
     webapp: "https://codesandbox.io/s/librairieapi-forked-evjk8c",
-    
   },
- 
 ];
 
-
+export const certifications = [
+  {
+    id: 0,
+    title: "Certificate de Lean IT",
+    issuer: "Lean IT Institute",
+    date: "19 Feb 2026",
+    description: "Certification en méthodologie Lean appliquée à l'informatique.",
+  },
+  {
+    id: 1,
+    title: "Oxford Online Placement Test",
+    issuer: "Oxford University Press",
+    date: "22 Mai 2023",
+    description: "Évaluation du niveau d'anglais — niveau B2.",
+  },
+  {
+    id: 2,
+    title: "Certificat JavaScript",
+    issuer: "Université Paul Sabatier",
+    date: "02 Avril 2022",
+    description: "Certificat d'accomplissement du cours langage JavaScript.",
+  },
+];

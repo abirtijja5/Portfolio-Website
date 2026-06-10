@@ -1,0 +1,15 @@
+{
+  "short_name": "TIJJA Abir",
+  "name": "Portfolio — TIJJA Abir",
+  "icons": [
+    {
+      "src": "TijjaImg.jpeg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#8B5CF6",
+  "background_color": "#04040C"
+}

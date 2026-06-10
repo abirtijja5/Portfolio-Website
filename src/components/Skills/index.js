@@ -1,147 +1,326 @@
-import React from 'react'
-import styled from 'styled-components'
+import React, { useEffect, useRef } from 'react'
+import styled, { keyframes } from 'styled-components'
 import { skills } from '../../data/constants'
 
+const fadeUp = keyframes`
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+`
+const gradientShift = keyframes`
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+`
+const marqueeLeft = keyframes`
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+`
+const marqueeRight = keyframes`
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+`
+
+/* ─── All skills flat list for marquee ─── */
+const allSkills = skills.flatMap(cat => cat.skills)
+
 const Container = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-position: relative;
-z-index: 1;
-align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  padding: 80px 0 90px;
 `
 
 const Wrapper = styled.div`
-position: relative;
-display: flex;
-justify-content: space-between;
-align-items: center;
-flex-direction: column;
-width: 100%;
-max-width: 1100px;
-gap: 12px;
-@media (max-width: 960px) {
-    flex-direction: column;
-}
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 0 20px;
 `
 
-export const Title = styled.div`
-font-size: 42px;
-text-align: center;
-font-weight: 600;
-margin-top: 20px;
-  color: ${({ theme }) => theme.text_primary};
-  @media (max-width: 768px) {
-margin-top: 12px;
-      font-size: 32px;
+const SectionTag = styled.div`
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #8B5CF6, #22D3EE);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+`
+
+const Title = styled.div`
+  font-family: 'Syne', sans-serif;
+  font-size: 50px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -2px;
+  background: linear-gradient(135deg, #F0F4FF 0%, #C4B5FD 40%, #67E8F9 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: ${gradientShift} 5s ease infinite;
+
+  @media (max-width: 768px) { font-size: 36px; letter-spacing: -1px; }
+`
+
+const Desc = styled.div`
+  font-size: 15px;
+  text-align: center;
+  max-width: 500px;
+  color: ${({ theme }) => theme.text_secondary};
+  line-height: 1.7;
+`
+
+/* ─── Marquee ─── */
+const MarqueeSection = styled.div`
+  width: 100%;
+  overflow: hidden;
+  margin-top: 50px;
+  padding: 0;
+  position: relative;
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 100px;
+    z-index: 2;
+    pointer-events: none;
   }
-`;
+  &::before {
+    left: 0;
+    background: linear-gradient(to right, #04040C, transparent);
+  }
+  &::after {
+    right: 0;
+    background: linear-gradient(to left, #04040C, transparent);
+  }
+`
 
-export const Desc = styled.div`
-    font-size: 18px;
-    text-align: center;
-    max-width: 600px;
-    color: ${({ theme }) => theme.text_secondary};
-    @media (max-width: 768px) {
-        font-size: 16px;
-    }
-`;
+const MarqueeRow = styled.div`
+  display: flex;
+  width: max-content;
+  gap: 12px;
+  margin-bottom: 12px;
+  animation: ${({ reverse }) => reverse ? marqueeRight : marqueeLeft}
+    ${({ speed }) => speed || '35'}s
+    linear infinite;
 
-const SkillsContainer = styled.div`
+  &:hover { animation-play-state: paused; }
+`
+
+const SkillPill = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 18px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text_secondary};
+  transition: all 0.3s ease;
+  cursor: default;
+  flex-shrink: 0;
+
+  img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    background: rgba(139, 92, 246, 0.1);
+    border-color: rgba(139, 92, 246, 0.4);
+    color: ${({ theme }) => theme.text_primary};
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.2);
+    transform: scale(1.05);
+  }
+`
+
+/* ─── Category Cards ─── */
+const CardsGrid = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 30px;
-  gap: 30px;
+  gap: 16px;
   justify-content: center;
+  margin-top: 60px;
 `
 
-const Skill = styled.div`
+const CategoryCard = styled.div`
   width: 100%;
-  max-width: 500px;
-  background: ${({ theme }) => theme.card};
-  border: 0.1px solid #854CE6;
-  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
-  border-radius: 16px;
-  padding: 18px 36px;
+  max-width: 460px;
+  border-radius: 20px;
+  padding: 26px 30px;
+  background: rgba(255, 255, 255, 0.025);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  animation: ${fadeUp} 0.7s ease both;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #8B5CF6, #22D3EE, #F472B6);
+    background-size: 200% auto;
+    animation: ${gradientShift} 3s linear infinite;
+  }
+
+  &:hover {
+    border-color: rgba(139, 92, 246, 0.25);
+    box-shadow: 0 24px 60px rgba(139, 92, 246, 0.12);
+    transform: translateY(-6px);
+  }
+
   @media (max-width: 768px) {
-    max-width: 400px;
-    padding: 10px 36px;
+    max-width: 100%;
+    padding: 22px 24px;
   }
-  @media (max-width: 500px) {
-    max-width: 330px;
-    padding: 10px 36px;
-  }
-
-
 `
 
-const SkillTitle = styled.h2`
-  font-size: 28px;
-  font-weight: 600;
-  color: ${({ theme }) => theme.text_secondary};
-  margin-bottom: 20px;
-  text-align: center;
+const CategoryTitle = styled.h3`
+  font-family: 'Syne', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #A78BFA, #67E8F9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 18px;
+  letter-spacing: -0.3px;
 `
 
 const SkillList = styled.div`
   display: flex;
-  justify-content: center; 
   flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 20px;
+  gap: 8px;
 `
 
-const SkillItem = styled.div`
-  font-size: 16px;
-  font-weight: 400;
-  color: ${({ theme }) => theme.text_primary + 80};
-  border: 1px solid ${({ theme }) => theme.text_primary + 80};
-  border-radius: 12px;
-  padding: 12px 16px;
+const SkillTag = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
-  @media (max-width: 768px) {
-    font-size: 14px;
-    padding: 8px 12px;
+  gap: 7px;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text_secondary};
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 8px;
+  padding: 7px 12px;
+  background: rgba(255, 255, 255, 0.025);
+  transition: all 0.25s ease;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+
+  img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
   }
-  @media (max-width: 500px) {
-    font-size: 14px;
-    padding: 6px 12px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(139,92,246,0.12), rgba(34,211,238,0.06));
+    opacity: 0;
+    transition: opacity 0.25s ease;
   }
+
+  &:hover {
+    border-color: rgba(139,92,246,0.5);
+    color: ${({ theme }) => theme.text_primary};
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(139,92,246,0.2);
+  }
+  &:hover::after { opacity: 1; }
 `
 
-const SkillImage = styled.img`
-  width: 24px;
-  height: 24px;
-`
-
-
+/* ─── Component ─── */
 const Skills = () => {
+  const sectionRef = useRef(null)
+
+  useEffect(() => {
+    const obs = new IntersectionObserver(
+      (entries) => entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('visible')
+      }),
+      { threshold: 0.1 }
+    )
+    if (sectionRef.current)
+      sectionRef.current.querySelectorAll('.reveal').forEach(el => obs.observe(el))
+    return () => obs.disconnect()
+  }, [])
+
+  const half = Math.ceil(allSkills.length / 2)
+  const row1 = allSkills.slice(0, half)
+  const row2 = allSkills.slice(half)
+
   return (
-    <Container id="skills">
+    <Container id="skills" ref={sectionRef}>
       <Wrapper>
-        <Title>Skills</Title>
-        <Desc>Here are some of my skills on which I have been working on for the past 3 years.
+        <SectionTag className="reveal">Compétences</SectionTag>
+        <Title className="reveal">Stack Technique</Title>
+        <Desc className="reveal">
+          Technologies que j'utilise au quotidien pour créer des expériences web modernes et performantes.
         </Desc>
-        <SkillsContainer>
-          {skills.map((skill) => (
-            <Skill>
-              <SkillTitle>{skill.title}</SkillTitle>
+      </Wrapper>
+
+      {/* ── Marquee ── */}
+      <MarqueeSection>
+        <MarqueeRow speed="40">
+          {[...row1, ...row1].map((skill, i) => (
+            <SkillPill key={i}>
+              <img src={skill.image} alt={skill.name} />
+              {skill.name}
+            </SkillPill>
+          ))}
+        </MarqueeRow>
+        <MarqueeRow speed="35" reverse>
+          {[...row2, ...row2].map((skill, i) => (
+            <SkillPill key={i}>
+              <img src={skill.image} alt={skill.name} />
+              {skill.name}
+            </SkillPill>
+          ))}
+        </MarqueeRow>
+      </MarqueeSection>
+
+      {/* ── Category Cards ── */}
+      <Wrapper>
+        <CardsGrid>
+          {skills.map((cat, i) => (
+            <CategoryCard
+              key={i}
+              className="reveal"
+              style={{ animationDelay: `${i * 0.08}s` }}
+            >
+              <CategoryTitle>{cat.title}</CategoryTitle>
               <SkillList>
-                {skill.skills.map((item) => (
-                  <SkillItem>
-                    <SkillImage src={item.image}/>
+                {cat.skills.map((item, j) => (
+                  <SkillTag key={j}>
+                    <img src={item.image} alt={item.name} />
                     {item.name}
-                  </SkillItem>
+                  </SkillTag>
                 ))}
               </SkillList>
-            </Skill>
+            </CategoryCard>
           ))}
-
-        </SkillsContainer>
+        </CardsGrid>
       </Wrapper>
     </Container>
   )

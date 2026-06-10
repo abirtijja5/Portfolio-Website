@@ -1,41 +1,216 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    
-}
-
-html{
-  scroll-behavior: smooth;
-}
-
-body{
-  margin: 0px !important;
+* {
+  box-sizing: border-box;
+  margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-/* width */
-::-webkit-scrollbar {
-    width: 4px;
-    height: 80px;
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0 !important;
+  padding: 0;
+  background: #04040C;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* Restore cursor on touch devices */
+@media (pointer: coarse) {
+  body { cursor: auto; }
+}
+
+/* ═══════════════════════════ SCROLLBAR ═══════════════════════════ */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #04040C; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #8B5CF6, #22D3EE);
+  border-radius: 4px;
+}
+
+/* ═══════════════════════════ KEYFRAMES ═══════════════════════════ */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-16px); }
+}
+
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes aurora {
+  0%   { transform: translate(0%, 0%) scale(1); }
+  33%  { transform: translate(3%, -4%) scale(1.05); }
+  66%  { transform: translate(-2%, 3%) scale(0.97); }
+  100% { transform: translate(0%, 0%) scale(1); }
+}
+
+@keyframes aurora2 {
+  0%   { transform: translate(0%, 0%) scale(1); }
+  33%  { transform: translate(-4%, 5%) scale(1.07); }
+  66%  { transform: translate(3%, -3%) scale(0.95); }
+  100% { transform: translate(0%, 0%) scale(1); }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.6); }
+  50% { transform: scale(1.2); opacity: 0.9; box-shadow: 0 0 0 8px rgba(52, 211, 153, 0); }
+}
+
+@keyframes glitch-1 {
+  0%, 88%, 100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transform: translate(0);
+    opacity: 0;
   }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background:#222A35;
+  90% {
+    clip-path: polygon(0 10%, 100% 10%, 100% 28%, 0 28%);
+    transform: translate(-4px, 1px);
+    opacity: 0.8;
   }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #63656b;
-    border-radius: 6px;
+  92% {
+    clip-path: polygon(0 55%, 100% 55%, 100% 72%, 0 72%);
+    transform: translate(3px, -2px);
+    opacity: 0.8;
   }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #626970;
+  94% {
+    clip-path: polygon(0 82%, 100% 82%, 100% 92%, 0 92%);
+    transform: translate(-2px, 1px);
+    opacity: 0.8;
   }
+  96% {
+    clip-path: polygon(0 40%, 100% 40%, 100% 58%, 0 58%);
+    transform: translate(4px, -1px);
+    opacity: 0.8;
+  }
+  98% {
+    clip-path: polygon(0 5%, 100% 5%, 100% 18%, 0 18%);
+    transform: translate(-3px);
+    opacity: 0.8;
+  }
+}
+
+@keyframes glitch-2 {
+  0%, 88%, 100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transform: translate(0);
+    opacity: 0;
+  }
+  90% {
+    clip-path: polygon(0 60%, 100% 60%, 100% 78%, 0 78%);
+    transform: translate(4px, -2px);
+    opacity: 0.7;
+  }
+  92% {
+    clip-path: polygon(0 22%, 100% 22%, 100% 38%, 0 38%);
+    transform: translate(-3px, 1px);
+    opacity: 0.7;
+  }
+  94% {
+    clip-path: polygon(0 68%, 100% 68%, 100% 85%, 0 85%);
+    transform: translate(2px, -3px);
+    opacity: 0.7;
+  }
+  96% {
+    clip-path: polygon(0 48%, 100% 48%, 100% 62%, 0 62%);
+    transform: translate(-4px, 2px);
+    opacity: 0.7;
+  }
+  98% {
+    clip-path: polygon(0 5%, 100% 5%, 100% 20%, 0 20%);
+    transform: translate(3px, -1px);
+    opacity: 0.7;
+  }
+}
+
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slide-right {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes counter-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer-line {
+  from { transform: translateX(-100%) skewX(-20deg); }
+  to   { transform: translateX(300%) skewX(-20deg); }
+}
+
+@keyframes border-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(160px) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(160px) rotate(-360deg); }
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ═══════════════════════════ UTILITIES ═══════════════════════════ */
+
+.font-syne { font-family: 'Syne', sans-serif; }
+
+.gradient-text {
+  background: linear-gradient(135deg, #8B5CF6 0%, #22D3EE 55%, #F472B6 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 5s ease infinite;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* dot grid background */
+.dot-grid {
+  background-image: radial-gradient(rgba(139, 92, 246, 0.15) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
