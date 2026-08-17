@@ -7,7 +7,7 @@ export const Bio = {
     "Web Developer",
   ],
   description:
-    "Développeuse Full-Stack alternante spécialisée en Ember.js, actuellement en double Master (Expert Informatique & Computer Science for Aerospace). Passionnée par la création d'interfaces modernes et performantes, je cherche à allier rigueur technique et créativité dans chaque projet.",
+    "Développeuse Full-Stack en double Master (Expert Informatique et SI à l'EPSI, Computer Science for Aerospace à l'Université Paul Sabatier), avec 2 ans d'expérience en alternance sur des applications web métier, du front (Angular, React, Ember.js) au back (Node.js, Java, Python). Recherche un poste Full-Stack à partir de septembre 2026.",
   github: "https://github.com/abirtijja5",
   resume:
     "https://drive.google.com/file/d/1oX2GP58p0a4nO9ReMioq-8lDlV5b3CMM/view?usp=sharing",
@@ -70,6 +70,16 @@ export const skills = [
     title: "Backend",
     skills: [
       {
+        name: "Java",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
+      },
+      {
+        name: "Spring Boot",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg",
+      },
+      {
         name: "Node Js",
         image: "https://nodejs.org/static/images/logo.svg",
       },
@@ -91,6 +101,11 @@ export const skills = [
       {
         name: "FastAPI",
         image: "https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png",
+      },
+      {
+        name: "PostgreSQL",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg",
       },
       {
         name: "MySQL",
@@ -160,11 +175,6 @@ export const skills = [
         name: "VS Code",
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png",
-      },
-      {
-        name: "Spring Boot",
-        image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg",
       },
     ],
   },
@@ -308,6 +318,18 @@ export const education = [
 
 export const projects = [
   {
+    id: 5,
+    title: "Devis de déménagement par IA",
+    date: "2026",
+    description:
+      "Application web qui estime un volume de déménagement à partir de photos, via l'API vision de Claude. Démo déployée sur Vercel.",
+    image: "https://zupimages.net/up/24/13/svbz.png",
+    tags: ["Next.js", "TypeScript", "Prisma", "Claude API"],
+    category: "web app",
+    github: "https://devis-demenagement-ia.vercel.app",
+    webapp: "https://devis-demenagement-ia.vercel.app",
+  },
+  {
     id: 0,
     title: "VirVoile PerfPredic",
     date: "Janvier 2024 – Présent",
@@ -378,6 +400,13 @@ export const projects = [
 ];
 
 export const certifications = [
+  {
+    id: 3,
+    title: "Google Machine Learning Crash Course — Fairness",
+    issuer: "Google",
+    date: "2026",
+    description: "Identification et atténuation des biais dans les données. Modules complémentaires en cours.",
+  },
   {
     id: 0,
     title: "Certificate de Lean IT",
