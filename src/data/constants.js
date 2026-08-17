@@ -201,7 +201,7 @@ export const experiences = [
     img: "https://cdn.freelancermap.com/images/freelancer/avatar/logo/2023/2/freelancer_logo_2.png",
     role: "Développeuse Web Freelance",
     company: "Remote — Indépendante",
-    date: "2024 – 2025",
+    date: "2023 – 2024",
     desc: "Intégration et modification d'interfaces avec React.js, HTML/CSS et Bootstrap. Correction de bugs et amélioration de fonctionnalités existantes. Participation à l'adaptation responsive des pages web. Échanges directs avec les clients pour comprendre et répondre aux besoins des projets.",
     skills: [
       "React.js",
