@@ -1,3 +1,5 @@
+import DevisDemenagementIAImg from "../images/DevisDemenagementIA.png";
+
 export const Bio = {
   name: "TIJJA Abir",
   roles: [
@@ -323,7 +325,7 @@ export const projects = [
     date: "2026",
     description:
       "Application web qui estime un volume de déménagement à partir de photos, via l'API vision de Claude. Démo déployée sur Vercel.",
-    image: "https://zupimages.net/up/24/13/svbz.png",
+    image: DevisDemenagementIAImg,
     tags: ["Next.js", "TypeScript", "Prisma", "Claude API"],
     category: "web app",
     github: "https://devis-demenagement-ia.vercel.app",
