@@ -1,14 +1,15 @@
 {
   "files": {
     "main.css": "/Portfolio-Website/static/css/main.b9891086.css",
-    "main.js": "/Portfolio-Website/static/js/main.03ebd1f5.js",
+    "main.js": "/Portfolio-Website/static/js/main.55cafdba.js",
     "static/media/TijjaImg.png": "/Portfolio-Website/static/media/TijjaImg.0c3f208d884fdfaa42f2.png",
+    "static/media/DevisDemenagementIA.png": "/Portfolio-Website/static/media/DevisDemenagementIA.def34b91ef5cbd03ef84.png",
     "index.html": "/Portfolio-Website/index.html",
     "main.b9891086.css.map": "/Portfolio-Website/static/css/main.b9891086.css.map",
-    "main.03ebd1f5.js.map": "/Portfolio-Website/static/js/main.03ebd1f5.js.map"
+    "main.55cafdba.js.map": "/Portfolio-Website/static/js/main.55cafdba.js.map"
   },
   "entrypoints": [
     "static/css/main.b9891086.css",
-    "static/js/main.03ebd1f5.js"
+    "static/js/main.55cafdba.js"
   ]
 }
